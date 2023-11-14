@@ -1,8 +1,8 @@
-package com.doutor.jpaHibernate.controller;
+package com.doutor.setListMusical.controller;
 
-import com.doutor.jpaHibernate.dto.request.UserRequestDTO;
-import com.doutor.jpaHibernate.dto.response.UserResponseDTO;
-import com.doutor.jpaHibernate.service.UserService;
+import com.doutor.setListMusical.dto.request.UserRequestDTO;
+import com.doutor.setListMusical.dto.response.UserResponseDTO;
+import com.doutor.setListMusical.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -49,8 +49,7 @@ public class UserController {
         return ResponseEntity.ok().body(userService.validatePass(email, pass));
     }
 
-    @PutMapping
-    @GetMapping("/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<UserResponseDTO> update(@RequestBody UserRequestDTO userRequestDTO, @PathVariable("id") Long id){
         return ResponseEntity.ok().body(userService.update(userRequestDTO, id));
     }

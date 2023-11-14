@@ -1,11 +1,11 @@
-package com.doutor.jpaHibernate.service;
+package com.doutor.setListMusical.service;
 
-import com.doutor.jpaHibernate.dto.request.UserRequestDTO;
-import com.doutor.jpaHibernate.dto.response.UserResponseDTO;
-import com.doutor.jpaHibernate.entity.User;
-import com.doutor.jpaHibernate.repository.UserRepository;
-import com.doutor.jpaHibernate.util.UserMapper;
-import com.doutor.jpaHibernate.util.UtilMethods;
+import com.doutor.setListMusical.dto.request.UserRequestDTO;
+import com.doutor.setListMusical.dto.response.UserResponseDTO;
+import com.doutor.setListMusical.entity.User;
+import com.doutor.setListMusical.repository.UserRepository;
+import com.doutor.setListMusical.util.UserMapper;
+import com.doutor.setListMusical.util.UtilMethods;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;

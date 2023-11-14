@@ -1,4 +1,4 @@
-package com.doutor.jpaHibernate.util;
+package com.doutor.setListMusical.util;
 
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
@@ -19,7 +19,7 @@ public class UtilMethods {
 
     private static String converterParaHexa(byte[] bytes) {
         StringBuilder s = new StringBuilder();
-        for (int i = 0; i < bytes.length; i++) {
+        for(int i = 0; i < bytes.length; i++) {
             int parteAlta = ((bytes[i] >> 4) & 0xf) << 4;
             int parteBaixa = bytes[i] & 0xf;
             if (parteAlta == 0) {

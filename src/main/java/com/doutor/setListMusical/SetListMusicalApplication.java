@@ -1,4 +1,4 @@
-package com.doutor.jpaHibernate;
+package com.doutor.setListMusical;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

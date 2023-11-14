@@ -1,7 +1,7 @@
-package com.doutor.jpaHibernate.service;
+package com.doutor.setListMusical.service;
 
-import com.doutor.jpaHibernate.dto.request.UserRequestDTO;
-import com.doutor.jpaHibernate.dto.response.UserResponseDTO;
+import com.doutor.setListMusical.dto.request.UserRequestDTO;
+import com.doutor.setListMusical.dto.response.UserResponseDTO;
 
 import java.util.List;
 

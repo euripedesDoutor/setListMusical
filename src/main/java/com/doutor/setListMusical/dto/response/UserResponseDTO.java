@@ -1,6 +1,6 @@
-package com.doutor.jpaHibernate.dto.response;
+package com.doutor.setListMusical.dto.response;
 
-import com.doutor.jpaHibernate.entity.User;
+import com.doutor.setListMusical.entity.User;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;

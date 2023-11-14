@@ -1,4 +1,4 @@
-package com.doutor.jpaHibernate.entity;
+package com.doutor.setListMusical.entity;
 
 import jakarta.persistence.*;
 import lombok.*;

@@ -1,8 +1,8 @@
-package com.doutor.jpaHibernate.util;
+package com.doutor.setListMusical.util;
 
-import com.doutor.jpaHibernate.dto.request.UserRequestDTO;
-import com.doutor.jpaHibernate.dto.response.UserResponseDTO;
-import com.doutor.jpaHibernate.entity.User;
+import com.doutor.setListMusical.dto.request.UserRequestDTO;
+import com.doutor.setListMusical.dto.response.UserResponseDTO;
+import com.doutor.setListMusical.entity.User;
 
 import java.util.List;
 import java.util.stream.Collectors;

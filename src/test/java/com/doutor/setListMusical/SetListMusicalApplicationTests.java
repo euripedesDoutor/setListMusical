@@ -1,4 +1,4 @@
-package com.doutor.jpaHibernate;
+package com.doutor.setListMusical;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

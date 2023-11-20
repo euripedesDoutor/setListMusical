@@ -1,14 +1,13 @@
-package com.doutor.setListMusical.controller;
+package com.doutor.setListMusical.controllers;
 
-import com.doutor.setListMusical.dto.request.UserRequestDTO;
-import com.doutor.setListMusical.dto.response.UserResponseDTO;
-import com.doutor.setListMusical.service.UserService;
+import com.doutor.setListMusical.dtos.UserDTO;
+import com.doutor.setListMusical.domain.User;
+import com.doutor.setListMusical.services.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import java.net.URI;
 import java.util.List;
 
 @RestController
@@ -18,25 +17,24 @@ public class UserController {
     private final UserService userService;
 
     @GetMapping("/{id}")
-    public ResponseEntity<UserResponseDTO> findById(@PathVariable("id") Long id){
+    public ResponseEntity<User> findById(@PathVariable("id") Long id){
         return ResponseEntity.ok().body(userService.findById(id));
     }
 
     @GetMapping("/findByEmail/{email}")
-    public ResponseEntity<UserResponseDTO> findById(@PathVariable("email") String email){
+    public ResponseEntity<User> findByEmail(@PathVariable("email") String email){
         return ResponseEntity.ok().body(userService.findByEmail(email));
     }
 
     @GetMapping
-    public ResponseEntity<List<UserResponseDTO>> findAll(){
+    public ResponseEntity<List<User>> findAll(){
         return ResponseEntity.ok().body(userService.findAll());
     }
 
     @PostMapping
-    public ResponseEntity<UserResponseDTO> register(@RequestBody UserRequestDTO userRequestDTO, UriComponentsBuilder uriBuilder){
-        UserResponseDTO userResponseDTO = userService.register(userRequestDTO);
-        URI uri = uriBuilder.path("/user/{id}").buildAndExpand(userResponseDTO.getId()).toUri();
-        return ResponseEntity.created(uri).body(userResponseDTO);
+    public ResponseEntity<User> register(@RequestBody UserDTO userDTO, UriComponentsBuilder uriBuilder){
+        User user = userService.register(userDTO);
+        return ResponseEntity.ok().body(user);
     }
 
     @PostMapping("/changePass/{id}/{pass}")
@@ -45,13 +43,13 @@ public class UserController {
     }
 
     @PostMapping("/validatePass/{email}/{pass}")
-    public ResponseEntity<Boolean> changePass(@PathVariable String email, @PathVariable String pass){
+    public ResponseEntity<Boolean> validatePass(@PathVariable String email, @PathVariable String pass){
         return ResponseEntity.ok().body(userService.validatePass(email, pass));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<UserResponseDTO> update(@RequestBody UserRequestDTO userRequestDTO, @PathVariable("id") Long id){
-        return ResponseEntity.ok().body(userService.update(userRequestDTO, id));
+    public ResponseEntity<User> update(@RequestBody UserDTO userDTO, @PathVariable("id") Long id){
+        return ResponseEntity.ok().body(userService.update(userDTO, id));
     }
 
     @DeleteMapping("/{id}")

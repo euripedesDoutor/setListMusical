@@ -1,6 +1,6 @@
-package com.doutor.setListMusical.repository;
+package com.doutor.setListMusical.repositories;
 
-import com.doutor.setListMusical.entity.User;
+import com.doutor.setListMusical.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<User, Long> {

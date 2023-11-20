@@ -1,5 +1,6 @@
-package com.doutor.setListMusical.entity;
+package com.doutor.setListMusical.domain;
 
+import com.doutor.setListMusical.dtos.UserDTO;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -22,11 +23,11 @@ public class User {
     private Boolean administrator;
     private String password;
 
-    @Builder
-    public User(String name, String phone, String email, Boolean administrator) {
-        this.name = name;
-        this.phone = phone;
-        this.email = email;
-        this.administrator = administrator;
+
+    public User(UserDTO userDto) {
+        this.name = userDto.name();
+        this.phone = userDto.phone();
+        this.email = userDto.email();
+        this.administrator = userDto.administrator();
     }
 }

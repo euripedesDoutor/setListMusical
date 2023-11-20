@@ -1,8 +1,7 @@
-package com.doutor.setListMusical.entity;
+package com.doutor.setListMusical.domain;
 
-import com.doutor.setListMusical.entity.enumEntity.TypeAttachmentEnum;
+import com.doutor.setListMusical.domain.enumEntity.TypeAttachmentEnum;
 import jakarta.persistence.*;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

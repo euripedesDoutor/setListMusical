@@ -1,4 +1,4 @@
-package com.doutor.setListMusical.entity;
+package com.doutor.setListMusical.domain;
 
 import jakarta.persistence.*;
 import lombok.Builder;

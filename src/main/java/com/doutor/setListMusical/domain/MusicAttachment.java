@@ -1,6 +1,7 @@
 package com.doutor.setListMusical.domain;
 
 import com.doutor.setListMusical.domain.enumEntity.TypeAttachmentEnum;
+import com.doutor.setListMusical.dtos.MusicAttachmentDTO;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,4 +20,9 @@ public class MusicAttachment {
     private byte[] document;
     @Enumerated(EnumType.STRING)
     private TypeAttachmentEnum typeAttachment;
+
+    public MusicAttachment(MusicAttachmentDTO musicAttachmentDto) {
+        this.document = musicAttachmentDto.document();
+        this.typeAttachment = musicAttachmentDto.typeAttachment();
+    }
 }
